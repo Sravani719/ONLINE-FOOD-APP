@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Styles from original code remain unchanged */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+        .card h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SRAVANI'S Kitchen</h1>
+    </header>
+    <div class="container">
+        <!-- Original cards for Total Events, Upcoming Events, Completed Events, Revenue, and New Bookings remain unchanged -->
+
+        <!-- New card for Tables Status -->
+        <div class="card">
+            <h2>Tables Status</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table Number</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table 1</td>
+                        <td>Booked</td>
+                    </tr>
+                    <tr>
+                        <td>Table 2</td>
+                        <td>Empty</td>
+                    </tr>
+                    <!-- Add more rows for additional tables -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- New card for Special Occasions -->
+        <div class="card">
+            <h2>Special Occasions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Occasion</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Anniversary</td>
+                        <td>May 10, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Birthday Party</td>
+                        <td>June 15, 2024</td>
+                    </tr>
+                    <!-- Add more rows for additional occasions -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Original card for Event Distribution remains unchanged -->
+        <div class="card">
+            <h2>Event Distribution</h2>
+            <canvas id="eventChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for the pie chart
+        const eventData = {
+            labels: ['Conference', 'Wedding', 'Party', 'Workshop'],
+            datasets: [{
+                data: [20, 30, 25, 25], 
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+            }]
+        };
+
+        // Initialize the pie chart
+        const eventChart = new Chart(document.getElementById('eventChart'), {
+            type: 'pie',
+            data: eventData
+        });
+    </script>
+</body>
+</html>

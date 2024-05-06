@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            .heading{
+                background-color: black;
+                color:white;
+                padding-left: 5px;
+                display:inline-block;
+                padding-bottom: 16px;
+                padding-top: 16px;
+                padding-left: 13px;
+                padding-right:15px;
+                font-size: 20px;
+                cursor: pointer;
+                border-radius: 4px;
+                transition: 1s;
+            }
+            .heading:hover{
+                background-color: white;
+                color:black;
+            }
+            header{
+                text-align: center;
+                background-image: url(background.avif);
+            }
+            main{
+                background-image: url(background2.png );
+            }
+            .nv{
+            display:block;
+            margin-left: 12px;
+            font-family:arial;
+            font-size :35px;
+            margin-top:0px;
+            }
+            .ts{
+                vertical-align: center;
+                height: 250px;
+                width: 250px;
+                border-radius:8px;
+                font-family:arial;
+            }
+            .ra{
+                margin-top:6px;
+                margin-bottom:0px;
+                margin-left: 30px;
+                font-family:arial;
+                font-size:32px;
+            }
+            .first{
+                display:inline-block;
+                margin-left: 300px;
+            }
+            .second{
+                display:inline-block;
+                margin-left: 100px;
+            }
+            .price{
+                margin-left:60px;
+                margin-top:0px;
+                margin-bottom:1px;
+                font-size: 29px;
+                color:brown;
+            }
+            .order{
+                margin-right: 0px;
+                margin-left: 30px;
+                background-color: black;
+                color:white;
+                border:2px solid rgb(209, 55, 55);
+                border-radius:3px;
+                transition: 1s;
+                padding-left: 6px;
+                padding-right:6px;
+                padding-top:6px ;
+                padding-bottom:6px ;
+                cursor: pointer;
+            }
+            .order:hover{
+                background-color:white;
+                color:black;
+                border:2px solid rgb(209, 55, 55);
+            }
+            .order:active{
+                 opacity: 0.2;
+                 box-shadow:2px 2px 2px black;
+            }
+            .cart{
+                margin-right: 0px;
+                margin-left: 20px;
+                background-color: black;
+                color:white;
+                border:2px solid rgb(209, 55, 55);
+                border-radius:3px;
+                transition: 1s;
+                padding-left: 6px;
+                padding-right:6px;
+                padding-top:6px ;
+                padding-bottom:6px ;
+                cursor: pointer;
+            }
+            .cart:hover{
+                background-color:white;
+                color:black;
+                border:2px solid rgb(209, 55, 55);
+            }
+            .cart:active{
+                 opacity: 0.2;
+                 box-shadow:2px 2px 2px black;
+            }
+            hr{
+                border : 4px dashed black;
+            }
+            .menu{
+                text-align: center;
+                color:red;
+                font-size:70px;
+                font-weight:700;
+                margin:0px;
+                font-family:'Times New Roman', Times, serif;
+            }
+            .space{
+                margin-top: 20px;
+            }
+            .stnv{
+                margin-left: 10px;
+                font-size: 40px;
+                color: brown;
+            }
+            .m11{
+                display:inline-block;
+                vertical-align: top;
+                margin-left: 96px;
+            }
+            .m12{
+                display: inline-block;
+                vertical-align: top;
+            }
+            .m13{
+                display: inline-block;
+                vertical-align: top;
+            }
+            .m14{
+                display: inline-block;
+                vertical-align: top;
+            }
+            .m15{
+                display: inline-block;
+            }
+            .m1{
+                width:190px;
+                height: 190px;
+                margin-left: 42px;
+                border-radius:6px;
+            }
+            .m1t{
+                font-size: 25px;
+                margin-left: 50px;
+                margin-top:8px;
+                margin-bottom:0px;
+            }
+            .m1p{
+                margin-top:3px;
+                margin-left: 68px;
+                margin-bottom: 0px;
+                font-size: 26px;
+            }
+            .m1o{
+                margin-right: 0px;
+                margin-left: 40px;
+                background-color: black;
+                color:white;
+                border:2px solid rgb(209, 55, 55);
+                border-radius:3px;
+                transition: 1s;
+                padding-left: 6px;
+                padding-right:6px;
+                padding-top:6px ;
+                padding-bottom:6px ;
+                cursor: pointer;
+            }
+            .m1o:hover{
+                background-color:white;
+                color:black;
+                border:2px solid rgb(209, 55, 55);
+            }
+            .m1o:active{
+                 opacity: 0.2;
+                 box-shadow:2px 2px 2px black;
+            }
+            .m1b{
+                margin-right: 0px;
+                margin-left: 10px;
+                background-color: black;
+                color:white;
+                border:2px solid rgb(209, 55, 55);
+                border-radius:3px;
+                transition: 1s;
+                padding-left: 6px;
+                padding-right:6px;
+                padding-top:6px;
+                padding-bottom:6px ;
+                cursor: pointer;
+            }
+            .m1b:hover{
+                background-color:white;
+                color:black;
+                border:2px solid rgb(209, 55, 55);
+            }
+            .m1b:active{
+                 opacity: 0.2;
+                 box-shadow:2px 2px 2px black;
+            }
+            .c11{
+                margin-left: 20px;
+            }
+            .m1tt{
+                margin-left: 28px;
+            }
+            .m1t1{
+                margin-left: 88px;
+                font-size: 27px;
+                margin-top: 2px;
+                margin-bottom: 0px;
+            }
+            .mn11{
+             display:inline-block;
+             vertical-align: top;
+            }
+            .mn12{
+                display:inline-block;
+                vertical-align: top;
+            }
+            .mn13{
+                display:inline-block;
+                vertical-align: top;
+            }
+            .mn14{
+                display:inline-block;
+            }
+            .mn15{
+                display:inline-block;
+            }
+            .mn1t{
+                margin-left: 79px;
+                font-size: 28px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                inline-size: 2px;
+            }
+            .mc{
+                margin-top:50px;
+            }
+            .mcv{
+                margin-left: 10px;
+                font-size: 40px;
+                color: brown; 
+            }
+            .mvcc{
+                margin-left: 3px;
+            }
+        </style>
+        <script src="1.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+            <p class="heading">THE JACK'S DISH </p>
+            </div>
+        </header>
+        <main>
+            <div>
+            <div>
+        <p class="nv"><u>Today's special:</u></p>
+        <div class="first"> 
+        <img class="ts" src="ts.jpeg"><br>
+        <p class="itemname">Rabbit Fry</p>
+        <p class="price"><del>&#8377;799</del> &#8377;659</p>
+        <button class="order">Order Now </button><button class="m1b" onclick="window.location.href='cart.html',cart ()">Add To Bag</button>
+        </a></button>
+        </div>
+        <div class="second"> 
+            <img class="ts" src="Chicken Lollipop Recipe.JPG"><br>
+            <p class="ra"><span class="cl">Chicken lolli</span></p>
+            <p class="price"><del>&#8377;550</del> &#8377;459</p>
+            <button class="order">Order Now </button class="cart"><button class="cart">Add To Bag</button>
+            </div>
+            </div>
+            <hr>
+           </div>
+           <p class="menu"><u>MENU</u></p>
+           <p class="stnv"><u>Starter(Veg):</u></p>
+           <div class="space">
+           <div class="m11">
+            <img class="m1" src="ccbc.jpeg"><br>
+            <p class="m1t"><span class="cl">Crispy Chilly <br><span class="c11">Babycorn</span></span></p>
+            <p class="m1p"><del>&#8377;350</del> &#8377;259</p>
+            <button class="m1o"><a href="https://www.swiggy.com/search?query=Crispy+Chilly+Babycorn"  target="_blank">Order Now</a> </button class="m1c"><button class="m1b">Add To Bag</button>
+           </div>
+           <div class="m12">
+            <img class="m1" src="cm.webp"><br>
+            <p class="m1t"><span class="cl"><span class="m1tt">Chilli </span><br>Mushroom</span></p>
+            <p class="m1p"><del>&#8377;350</del> &#8377;275</p>
+            <button class="m1o"><a href="https://www.nandanmsd.com/product/chilli-mushroom-dry/" target="_blank">Order Now </a></button class="m1c"><button class="m1b">Add To Bag</button>
+           </div>
+           <div class="m13">
+            <img class="m1" src="sr.jpeg"><br>
+            <p class="m1t1"><span class="cl">Spring<br> Rolls</span></p>
+            <p class="m1p"><del>&#8377;550</del> &#8377;459</p>
+            <button class="m1o"><a href="https://www.handibazaar.com/product/spring-roll/" target="_blank">Order Now </a></button class="m1c"><button class="m1b">Add To Bag</button>
+           </div>
+           <div class="m14">
+            <img class="m1" src="cp.webp"><br>
+            <p class="m1t1"><span class="cl">Chilli <br> Potato</span></p>
+            <p class="m1p"><del>&#8377;550</del> &#8377;459</p>
+            <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+           </div>
+           <div class="m15">
+           <img class="m1" src="gfbc.jpeg"><br>
+           <p class="m1t"><span class="cl">Golden Fried <br><span class="m1ttt">Babycorn</span></span></p>
+           <p class="m1p"><del>&#8377;550</del> &#8377;459</p>
+           <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+          </div>
+           </div>
+           <div class="stnv"> 
+            <p><u>Starter(Non-Veg):</u></p>
+           </div>
+        <div>
+            <div class="mn11">
+                <img class="m1" src="cc.webp"><br>
+                <p class="mn1t"><span class="cl">Chilli<br>chicken</span></span></p>
+                <p class="m1p"><del>&#8377;450</del> &#8377;335</p>
+                <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+               </div>
+               <div class="mn12">
+                <img class="m1" src="Chicken Lollipop Recipe.JPG"><br>
+                <p class="mn1t"><span class="cl">Chicken <br>Lollipop<br></span></p>
+                <p class="m1p"><del>&#8377;550</del> &#8377;459</p>
+                <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+               </div>
+               <div class="mn13">
+                <img class="m1" src="chilli prawn.jpg"><br>
+                <p class="mn1t"><span class="cl">Chilli <br>Prawn</span></span></p>
+                <p class="m1p"><del>&#8377;550</del> &#8377;455</p>
+                <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+               </div>
+               <div class="mn14">
+                <img class="m1" src="csr.jpg"><br>
+                <p class="mn1t"><span class="cl">Chicken <br>Rolls</span></span></p>
+                <p class="m1p"><del>&#8377;450</del> &#8377;335</p>
+                <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+               </div>
+               <div class="mn15">
+                <img class="m1" src="grilled mutton chops.jpg"><br>
+                <p class="mn1t"><span class="cl">Mutton Chops</span></span></p>
+                <p class="m1p"><del>&#8377;749</del> &#8377;655</p>
+                <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+               </div>
+        </div> 
+         <div class="mcv"><p><u>Main Course(Veg):</u></p></div>
+        <div class="mc">
+               <div class="mn12">
+                <img class="m1" src="mixed veg curry.webp"><br>
+                <p class="mn1t"><span class="cl"><span class="mvcc">Mixed Veg</span><br>Curry</span></p>
+                <p class="m1p"><del>&#8377;550</del> &#8377;459</p>
+                <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+               </div>
+               <div class="mn13">
+                <img class="m1" src="Vegetables-in-Garlic-Sauce.webp"><br>
+                <p class="mn1t"><span class="cl">Mixed Veg(solup)<br>Curry</span></p>
+                <p class="m1p"><del>&#8377;550</del> &#8377;455</p>
+                <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+               </div>
+               <div class="mn14">
+                <img class="m1" src="corn and mushroom fry.jpg"><br>
+                <p class="mn1t"><span class="cl">Corn&Mushroom <br> Fry</span></span></p>
+                <p class="m1p"><del>&#8377;450</del> &#8377;335</p>
+                <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+               </div>
+               <div class="mn15">
+                <img class="m1" src="Kaju-curry-recipe-nb.jpg"><br>
+                <p class="mn1t"><span class="cl">Kaju Curry</span></span></p>
+                <p class="m1p"><del>&#8377;749</del> &#8377;655</p>
+                <button class="m1o">Order Now </button class="m1c"><button class="m1b">Add To Bag</button>
+               </div>
+        </div>  
+    </main>
+    </body>
+    </html>
